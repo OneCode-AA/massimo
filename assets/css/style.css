@@ -5,27 +5,23 @@
     --text-secondary: #171717; */
     --text-alt: #1d2731; 
     --border-color: #cccccc;
-    --button-bg: #007bff;
-    --button-text: #ffffff;
-    --button-hover-bg: #0056b3;
-    --button-hover-text: #ffffff;
-    --input-bg: #ffffff;
-    --input-border: #cccccc;
-    --input-focus-bg: #e0e0e0;
-    --input-focus-border: #007bff;
-    --input-placeholder: #999999;
-    --input-text: #333333;
-    --link-color: #007bff;
-    --link-hover-color: #0056b3;
-    --link-active-color: #004085;
-    --link-visited-color: #6f42c1;
+    --button-hover-bg: #ff5858;
+    --link-hover-color: #ff8989;
+    --link-active-color: #ff5858;
+    --link-visited-color: #ffb6b6;
     --line-height: 1.5;
     --border-radius: 4px;
     --transition: 500ms ease-in-out;
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+   
     --gold: #ffd700;
 
-
+    --flamingo-100: #ffe4e4;
+    --flamingo-200: #ffb6b6;
+    --flamingo-300: #ff8989;
+    --flamingo-400: #ff7777;
+    --flamingo-500: #ff5858;
 
 
 }
@@ -35,12 +31,21 @@ body.dark-theme {
     --bg-secondary: #F1F5F9;
     --text-primary: #F1F5F9;
     --text-secondary: #171717;
+
+    --button-bg: #F1F5F9;
+    --button-text: #171717;
+    --button-hover-text: #F1F5F9;
 }
 body.light-theme {
     --bg-primary: #F1F5F9;
     --bg-secondary: #171717;
     --text-primary: #171717;
     --text-secondary: #F1F5F9;
+
+    --button-bg: #171717;
+    --button-text: #F1F5F9;
+    --button-hover-text: #171717;
+
 }
 
 html {

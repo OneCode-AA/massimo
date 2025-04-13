@@ -22,6 +22,11 @@
     order: 2;
 }
 
+.scrolling.active .header-container {
+  width: 100%;
+  max-width: 300px;
+}
+
 .logo-link {
   display: none;
 }
