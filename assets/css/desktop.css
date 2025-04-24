@@ -1,0 +1,76 @@
+@media (min-width: 1024px) {
+
+    .header {
+        top: 0;
+       
+    }
+
+    .header-container {
+        max-width: unset;
+        margin-block: 20px;
+        border-radius: unset;
+        justify-content: end;
+    }
+
+    header.scrolling .header-container {
+        padding-block: 15px;
+      width: 100%;
+        max-width: 1200px;
+        border-radius: 2rem;
+        border: 1px solid var(--bg-secondary);
+        background: black;
+ 
+      }
+
+      
+
+    .global-logo-link {
+        top: 4vh;
+    }
+    .menu-container {
+        display: none;
+    }
+
+    .scrolling .top-menu-container {
+        display: none;
+      }
+    
+      .action-menu {
+        position: fixed;
+        display: flex;
+        visibility: visible;
+        height: fit-content;
+        top: 36px;
+        right: 0vw;
+        opacity: 1;
+      }
+
+      .menu {
+        display: none;
+      }
+
+
+      .header-nav {
+        display: flex;
+        order: 1;
+        margin-right: 30vw;
+      }
+
+      .pageIndicator {
+        order: 2;
+      margin-inline: 83px;
+      }
+
+    .experiences {
+        flex-direction: unset;
+    }
+
+    .job-ul {
+        flex-direction: unset;
+    }
+    .flex-container {
+        
+        flex-direction: column;
+
+      }
+}
