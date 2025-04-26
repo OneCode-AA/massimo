@@ -87,6 +87,7 @@ button:hover {
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 60;
   
 }
 
@@ -107,6 +108,7 @@ button:hover {
   background-color: var(--bg-secondary);
   margin-block: 10px;
   border-radius: 2rem;
+ 
 } 
 
 
@@ -276,7 +278,27 @@ button:hover {
   color: var(--bg-primary);
 }
 
+.header-nav ul {
+  gap: 0;
+}
 
+
+.header-nav li {
+  width: 100%;
+  padding-inline: auto;
+  text-align: center;
+}
+
+.header-nav li a {
+  display: block;
+  padding-block: 15px;
+  padding-inline: 25px;
+}
+
+.header-nav li:hover a {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
 
 :is(.hero, .experiences, .work, .skills, .contact) {
   min-height: 95vh;
