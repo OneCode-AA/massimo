@@ -138,9 +138,9 @@ const navItems = [
 ];
 
 const socialLinks = [
-  { icon: "logo-codepen", href: "#", class: "codepenIcon" },
-  { icon: "logo-linkedin", href: "#", class: "linkedinIcon" },
-  { icon: "logo-youtube", href: "#", class: "youtubeIcon" },
+  { icon: "logo-codepen", href: "https://codepen.io/thetwomigrations", class: "codepenIcon" },
+  { icon: "logo-linkedin", href: "https://www.linkedin.com/in/abooabdillaahmbj/", class: "linkedinIcon" },
+  { icon: "logo-youtube", href: "https://www.youtube.com/@TheTwoMigrations", class: "youtubeIcon" },
 ];
 
 function generateNav(id) {
