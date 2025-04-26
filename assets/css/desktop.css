@@ -43,6 +43,11 @@
     .pageIndicator {
       display: none;
     }
+
+
+    .hero {
+      gap: 7rem;
+    }
   
     .heroIntro {
       align-items: flex-start;
@@ -50,6 +55,13 @@
     }
     .hero-container {
       flex-direction: row;
+      gap: 8rem;
+    }
+
+    .message {
+  
+      min-height: 70px;
+      width: 500px;
     }
 
 
