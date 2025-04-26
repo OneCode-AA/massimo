@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Massimo</title>
+    <title>Massimo - Comic Version</title>
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/tablet.css" />
@@ -20,66 +20,75 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
-
   </head>
-  <body class="dark-theme">
-    <a href="index.html" class="global-logo-link">
-      <span class="logo-left"></span>
-      <span class="logo-text">M</span>
-      <span class="logo-right"></span>
-    </a>
-    <div id="top-menu-container" class="top-menu-container">
-      <ion-icon name="caret-down-circle-outline" class="actionBtnTop" id="actionBtnTop"></ion-icon>
-    </div>
+  <body class="light-theme">
     <header id="header" class="header">
       <div class="header-container">
           <a href="index.html" class="logo-link">
-            <span class="logo-left"></span>
-            <span class="logo-text">M</span>
-            <span class="logo-right"></span>
+            <ion-icon name="logo-mastodon" class="logoIcon"></ion-icon>
+            <span class="logo-text">ohamed Jalloh</span>
           </a>
-          <span id="pageIndicator" class="pageIndicator"></span>
-          <span class="divider"> </span>
+
+          <span class="divider divider0"></span>
+          
           <nav id="header-nav" class="header-nav">
             <ul class="header-nav-ul" id="mainNav"></ul>
           </nav>
 
-          <nav id="nav" class="nav">
-            <ul class="nav-ul" id="mobileNav"></ul>
-            <ul class="social-ul" id="navSocial"></ul>
-          </nav>
-        
-        <div id="menu-container" class="menu-container">
-          <ion-icon name="caret-up-circle-outline" class="actionBtn" id="actionBtn"></ion-icon>
-        </div>
-        
-        
+          <span id="pageIndicator" class="pageIndicator"></span>
+          <span class="divider divider1"> </span>
+
+
+          <button id="mobileMenuBtn" class="mobileMenuBtn menuBtn" aria-expanded="false">
+            <span class="first"></span>
+            <span class="second"></span>
+            <span class="third"></span>
+          </button>
       </div>
     </header>
-    <div class="action-menu" id="actionMenu">
-      <button id="menu" class="menu" aria-expanded="false">
+
+    <div class="actionMenu" id="actionMenu">
+     
+      <button id="tabletMenuBtn" class="tabletMenuBtn menuBtn" aria-expanded="false">
         <span class="first"></span>
         <span class="second"></span>
         <span class="third"></span>
       </button>
-      <button id="theme-btn" class="theme-btn" role="switch" aria-checked="false">
-        <span id="status-indicator" class="status-indicator"></span>
+      <button id="themeBtn" class="themeBtn" role="switch" aria-checked="false">
+        <span id="statusIndicator" class="statusIndicator"></span>
       </button>
     </div>
+    <nav id="nav" class="nav">
+      <ul class="nav-ul" id="mobileNav"></ul>
+      <ul class="social-ul" id="navSocial"></ul>
+    </nav>
+    
     
     <main id="main" class="main">
         <section id="hero" class="hero" role="Hero">
           <article class="hero-container">
-            <h2 id="myName">Mohamed Jalloh</h2>
-            <h3 id="myTitle"></h3>
-            <br>
-            <br>
-            <a href="#" class="contact-btn">
-              <span class="contact-btn-text">Contact Me</span>
-              <ion-icon name="arrow-forward-outline" class="contact-btn-icon"></ion-icon>
-            </a>
+            <section class="heroIntro">
+              <p class="watchLink"><span>|</span> Follow my adventures on <a href=""><ion-icon name="logo-youtube"></ion-icon></a></p>
+              <h2 id="myName">I am <span class="heroName">Mohamed Jalloh</span></h2>
+              <h3 class="titleContainer">a <span id="myTitle"></span></h3>
+              <p class="hero-text">I create Website and Apps with a twist of imagination..</p>
+              <a href="#" class="contact-btn">
+                <span class="contact-btn-text">Contact Me</span>
+                <ion-icon name="chevron-forward-outline" class="contact-btn-icon"></ion-icon>
+              </a>
+            </section>
+
+            <section class="heroPreview">
+              <a href="#work" class="previewProject">
+                <img src="./assets/img/planaheadappimg.png" alt="" class="previewImg">
+              </a>
+            </section>
           </article>
-          <ul class="social-ul" id="heroSocial"></ul>
+          <article class="socialContainer">
+            <p class="socialNews">Connect With Me</p>
+            <ul class="social-ul" id="heroSocial"></ul>
+          </article>
+      
         </section>
         <section id="experiences" class="experiences">
           <h2 class="section-title">Relevant Experiences</h2>
@@ -95,7 +104,7 @@
         </article>
         </section>
         
-           <section id="work" class="work" role="My Work">
+    <section id="work" class="work" role="My Work">
             <h2 class="section-title">My Work</h2>
             <article class="projects-container"></article>
           </section>
@@ -103,37 +112,42 @@
             <h2 class="section-title">Skills</h2>
             <article class="flex-container">
               <ul id="skill-ul" class="skill-ul">
-                <!-- Skill category tabs go here -->
+               
               </ul>
               <section id="skill-set" class="skill-set">
-                <!-- Selected skill list will render here -->
+               
               </section>
             </article>
           </section>
           
-        <section id="contact" class="contact" role="Contact">
+  <section id="contact" class="contact" role="Contact">
           <h2 class="section-title">Contact</h2>
           <article class="contact-container">
-            <p class="contact-description">If you would like to get in touch, feel free to reach out to me via email or connect with me on LinkedIn.</p>
+            <p class="contact-description">If you would like to get in touch, feel free to reach out to me via email.</p>
             <a href="#" class="contact-link">
               <span class="contact-link-text">Email Me</span>
               <ion-icon name="arrow-forward-outline" class="contact-link-icon"></ion-icon>
             </a>
           </article>
-          <article class="contact-container">
+       <article class="contact-container">
             <p class="contact-description">You can also find me on social media platforms like LinkedIn and GitHub.</p>
-            <a href="#" class="contact-link">
-              <span class="contact-link-text">Connect on LinkedIn</span>
-              <ion-icon name="arrow-forward-outline" class="contact-link-icon"></ion-icon>
-            </a>
+
+            <section class="links-container">
+              <a href="#" class="contact-link">
+                <span class="contact-link-text">Connect on LinkedIn</span>
+                <ion-icon name="arrow-forward-outline" class="contact-link-icon"></ion-icon>
+              </a>
+  
+              <a href="#" class="contact-link">
+                <span class="contact-link-text">View My GitHub</span>
+                <ion-icon name="arrow-forward-outline" class="contact-link-icon"></ion-icon>
+              </a>
+            </section>
+            
+
+           
           </article>
-          <article class="contact-container">
-            <p class="contact-description">I look forward to hearing from you!</p>
-            <a href="#" class="contact-link">
-              <span class="contact-link-text">View My GitHub</span>
-              <ion-icon name="arrow-forward-outline" class="contact-link-icon"></ion-icon>
-            </a>
-          </article>
+          <p class="contact-description">I look forward to hearing from you!</p>
         </section>
         <section id="footer" class="footer">
           <ul class="social-ul" id="footerSocial"></ul>
@@ -141,7 +155,7 @@
           
         </section>
       </section>
-    </main>
+    </main> 
 
     <script src="assets/js/script.js"></script>
   </body>

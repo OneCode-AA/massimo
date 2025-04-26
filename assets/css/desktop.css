@@ -1,76 +1,123 @@
 @media (min-width: 1024px) {
 
     .header {
-        top: 0;
-       
+      position: fixed;
+      top: 0;
     }
-
-    .header-container {
-        max-width: unset;
-        margin-block: 20px;
-        border-radius: unset;
-        justify-content: end;
-    }
-
-    header.scrolling .header-container {
-        padding-block: 15px;
+  
+    .header.active .header-container {
       width: 100%;
-        max-width: 1200px;
-        border-radius: 2rem;
-        border: 1px solid var(--bg-secondary);
-        background: black;
- 
-      }
-
-      
-
-    .global-logo-link {
-        top: 4vh;
+      max-width: 1050px;
+    } 
+  
+    .actionMenu {
+      right: 1px;
+      top: 15vh;
+      transform: rotate(90deg);
     }
-    .menu-container {
-        display: none;
+  
+    .statusIndicator {
+      transform: rotate(-85deg);
     }
-
-    .scrolling .top-menu-container {
-        display: none;
-      }
-    
-      .action-menu {
-        position: fixed;
-        display: flex;
-        visibility: visible;
-        height: fit-content;
-        top: 36px;
-        right: 0vw;
-        opacity: 1;
-      }
-
-      .menu {
-        display: none;
-      }
-
-
-      .header-nav {
-        display: flex;
-        order: 1;
-        margin-right: 30vw;
-      }
-
-      .pageIndicator {
-        order: 2;
-      margin-inline: 83px;
-      }
-
-    .experiences {
-        flex-direction: unset;
+  
+    .mobileMenuBtn {
+      display: none;
+    }
+  
+    .header-nav {
+      display: flex;
+    }
+  
+    .header-nav-ul {
+      display: flex;
+      gap: 2rem;
+    }
+  
+    .pageIndicator {
+      display: none;
+    }
+  
+    .heroIntro {
+      align-items: flex-start;
+     
+    }
+    .hero-container {
+      flex-direction: row;
     }
 
+
+  
+    .experience-role {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 10px;
+    }
+  
+    .job {
+      max-width: 70vw;
+    }
+  
     .job-ul {
-        flex-direction: unset;
+      max-width: 750px;
+      flex-direction: row;
     }
-    .flex-container {
-        
-        flex-direction: column;
-
-      }
-}
+  
+    .experiences .flex-container {
+      flex-direction: column;
+    }
+  
+    .skills .flex-container {
+      flex-direction: column;
+    }
+  
+    .skill-ul {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .skills {
+      max-width: 80vw;
+      margin: auto;
+    }
+  
+    .skill-card {
+      flex-direction: row;
+    }
+  
+    .skill-title {
+      max-width: 400px;
+      height: 100%;
+      min-height: 300px;
+      border-bottom: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .skills .skills-ul {
+      width: 100%;
+      min-height: 300px;
+    }
+  
+    .contact-container {
+      flex-direction: row;
+      justify-content: start;
+      width: 100%;
+      max-width: 80vw;
+      margin: auto;
+      gap: 2rem;
+    }
+  
+    .contact-description {
+      max-width: 40vw;
+    }
+  
+    .links-container {
+      align-items: flex-start;
+    }
+  }
+  
