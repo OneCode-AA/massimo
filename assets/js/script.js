@@ -1,6 +1,3 @@
-// ==========================
-// Element Selections
-// ==========================
 const menuBtn = document.querySelector('.menuBtn');
 const nav = document.getElementById("nav");
 const header = document.getElementById("header");
@@ -11,9 +8,9 @@ const actionMenu = document.getElementById('actionMenu');
 const myTitle = document.getElementById("myTitle");
 const sections = document.querySelectorAll("section");
 
-// ==========================
-// Theme Toggle Setup
-// ==========================
+
+
+
 themeSwitch.addEventListener("click", () => {
   const isDark = document.body.classList.contains("dark-theme");
 
@@ -30,7 +27,9 @@ themeSwitch.addEventListener("click", () => {
   }
 });
 
-// Initialize Theme from LocalStorage
+
+
+
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "light-theme") {
   document.body.classList.add("light-theme");
@@ -42,9 +41,9 @@ if (savedTheme === "light-theme") {
   themeBtn.setAttribute("aria-checked", "false");
 }
 
-// ==========================
-// Mobile Menu Toggle
-// ==========================
+
+
+
 menuBtn.addEventListener("click", () => {
   nav.classList.toggle("opened");
   header.classList.toggle("active");
@@ -54,9 +53,11 @@ menuBtn.addEventListener("click", () => {
   menuBtn.setAttribute("aria-expanded", expanded);
 });
 
-// ==========================
-// Dynamic Title Typewriter
-// ==========================
+
+
+
+
+
 const message = document.createElement("span");
 message.classList.add("message");
 myTitle.appendChild(message);
@@ -95,16 +96,19 @@ function loopSession(index = 0) {
 
 loopSession();
 
-// ==========================
-// Scroll Header Active State
-// ==========================
+
+
+
+
 window.addEventListener("scroll", () => {
   header.classList.toggle("active", window.scrollY > 0);
 });
 
-// ==========================
-// Intersection Observer for Page Indicator
-// ==========================
+
+
+
+
+
 const observer = new IntersectionObserver((entries) => {
   const visibleEntries = entries.filter(entry => entry.isIntersecting);
 
@@ -126,9 +130,9 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => observer.observe(section));
 
 
-// ==========================
-// Dynamic Navigation and Social Links
-// ==========================
+
+
+
 const navItems = [
   { text: "Home", href: "#hero" },
   { text: "Experiences", href: "#experiences" },
@@ -187,9 +191,7 @@ generateNav("mobileNav");
 generateSocial("heroSocial");
 generateSocial("footerSocial");
 
-// ==========================
-// Experience Section Rendering
-// ==========================
+
 const experiences = [
   {
     title: "Coding Instructor Intern",
@@ -233,7 +235,7 @@ function renderExperienceByCompany(companyKey) {
   `;
 }
 
-// ✅ Event Delegation for job-li
+
 document.getElementById("job-ul").addEventListener("click", (e) => {
   const li = e.target.closest(".job-li");
   if (!li) return;
@@ -247,9 +249,8 @@ document.getElementById("job-ul").addEventListener("click", (e) => {
 
 renderExperienceByCompany("NVF");
 
-// ==========================
-// Projects Section Rendering
-// ==========================
+
+
 const projects = [
   {
     title: "Plan Ahead App",
@@ -298,9 +299,9 @@ function renderProjects() {
 
 renderProjects();
 
-// ==========================
-// Skills Section Rendering
-// ==========================
+
+
+
 const skills = [
   {
     title: "Frontend",
@@ -354,7 +355,7 @@ function renderSkillSet(skillTitle) {
   container.appendChild(section);
 }
 
-// ✅ Event Delegation for skill-li
+
 document.getElementById("skill-ul").addEventListener("click", (e) => {
   const li = e.target.closest(".skill-li");
   if (!li) return;
