@@ -50,7 +50,7 @@
     }
   
     .heroIntro {
-      align-items: flex-start;
+      align-items: center;
      
     }
     .hero-container {
@@ -58,10 +58,15 @@
       gap: 8rem;
     }
 
+    #myName {
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
+
     .message {
-  
-      min-height: 70px;
-      width: 500px;
+      min-height: 50px;
+      width: 300px;
     }
 
 

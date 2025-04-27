@@ -313,7 +313,7 @@ const skills = [
   },
   {
     title: "Frameworks & Libraries",
-    sets: [{ name: "React.js/Next.js" }, { name: "jQuery" }, { name: "Bootstrap" }, { name: "TailwindCSS" }, { name: "SASS/LESS" }]
+    sets: [{ name: "React.js/Next.js" }, { name: "Express.js"}, { name: "jQuery" }, { name: "Bootstrap" }, { name: "TailwindCSS" }, { name: "SASS/LESS" }]
   },
   {
     title: "Tools",

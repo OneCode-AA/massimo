@@ -654,12 +654,16 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .skill-li {
-  padding: 2px 4px;
+  padding: 2px 0;
   background: var(--bg-secondary);
-  color: var(--text-secondary);
+  color: var(--text-secondary);min-width: 200px;
+  text-align: center;
+
 }
 
 .skill-li.active {
@@ -667,6 +671,31 @@ button:hover {
   color: var(--bg-primary);
 }
 
+.skill-li:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  cursor: pointer;
+ 
+}
+
+.skill-li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  top: 6px;
+}
+.skill-li:hover::after {
+  background: var(--flamingo-500);
+  content: "";
+  display: block;
+  width: 100%;
+  min-width: max-content;
+  height: 3px;
+}
 
 
 .skill-card {
@@ -675,6 +704,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   padding-block: 10px;
+  margin-top: 30px;
 }
 
 .skill-title {
@@ -707,6 +737,13 @@ button:hover {
   text-align: center;
   gap: 1rem;
   padding-block: 10px;
+}
+
+.contact-description {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  max-width: 600px;
+ padding-block: 10px;
 }
 
 .contact-link {
