@@ -3,160 +3,200 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Massimo - Comic Version</title>
+    <title>Massimo - Official Site</title>
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/tablet.css" />
     <link rel="stylesheet" href="assets/css/desktop.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body class="dark-theme">
     <header id="header" class="header">
-      <div class="header-container">
-          <a href="index.html" class="logo-link">
-            <ion-icon name="logo-mastodon" class="logoIcon"></ion-icon>
-            <span class="logo-text">ohamed Jalloh</span>
-          </a>
+      <div id="header-container" class="header-container">
+        <button
+          id="mobileMenuBtn"
+          class="mobileMenuBtn menuBtn"
+          aria-expanded="false"
+        >
+          <span class="first"></span>
+          <span class="second"></span>
+          <span class="third"></span>
+        </button>
 
-          <span class="divider divider0"></span>
-          
-          <nav id="header-nav" class="header-nav">
-            <ul class="header-nav-ul" id="mainNav"></ul>
-          </nav>
+        <nav id="navDesktop" class="navDesktop">
+          <ul class="leftNav nav-ul">
+            <li class="nav-li">
+              <a href="#about" class="nav-li-a">About</a>
+            </li>
+            <li class="nav-li">
+              <a href="#experiences" class="nav-li-a">Experiences</a>
+            </li>
+          </ul>
 
-          <span id="pageIndicator" class="pageIndicator"></span>
-          <span class="divider divider1"> </span>
+          <ul class="rightNav nav-ul">
+            <li class="nav-li">
+              <a href="#projects" class="nav-li-a">Projects</a>
+            </li>
+            <li class="nav-li">
+              <a href="#blog" class="nav-li-a">Blog</a>
+            </li>
+          </ul>
+        </nav>
 
-
-          <button id="mobileMenuBtn" class="mobileMenuBtn menuBtn" aria-expanded="false">
-            <span class="first"></span>
-            <span class="second"></span>
-            <span class="third"></span>
-          </button>
+        <button
+          id="themeBtn"
+          class="themeBtn"
+          role="switch"
+          aria-checked="false"
+        >
+          <span id="statusIndicator" class="statusIndicator"></span>
+        </button>
       </div>
     </header>
+    <div id="actionNav" class="actionNav">
+      <a href="index.html" id="logo" class="logo logo-link">
+        <span class="logo-left"></span>
+        <span class="logo-text">M</span>
+        <span class="logo-right"></span>
+      </a>
 
-    <div class="actionMenu" id="actionMenu">
-     
-      <button id="tabletMenuBtn" class="tabletMenuBtn menuBtn" aria-expanded="false">
-        <span class="first"></span>
-        <span class="second"></span>
-        <span class="third"></span>
-      </button>
-      <button id="themeBtn" class="themeBtn" role="switch" aria-checked="false">
-        <span id="statusIndicator" class="statusIndicator"></span>
-      </button>
+      <span id="pageIndicator" class="pageIndicator"></span>
+      <span class="divider divider1"> </span>
     </div>
-    <nav id="nav" class="nav">
-      <ul class="nav-ul" id="mobileNav"></ul>
+    <nav id="mobileNav" class="mobileNav">
+      <ul class="mobileNav-ul" id="mobileNav-ul"></ul>
       <ul class="social-ul" id="navSocial"></ul>
     </nav>
-    
-    
+
     <main id="main" class="main">
-        <section id="hero" class="hero" role="Hero">
-          <article class="hero-container">
-            <section class="heroIntro">
-              <p class="watchLink"><span>|</span> Follow my adventures on <a href="https://www.youtube.com/@TheTwoMigrations"><ion-icon name="logo-youtube"></ion-icon></a></p>
-              <h2 id="myName">I am <span class="heroName">Mohamed Jalloh</span></h2>
-              <article id="myTitle" class="myTitle"></article>
-              <p class="hero-text">I create Website and Apps with a twist of imagination..</p>
-              <a href="mailto:abooabdillaah.mbj@gmail.com" class="contact-btn">
-                <span class="contact-btn-text">Contact Me</span>
-                <ion-icon name="chevron-forward-outline" class="contact-btn-icon"></ion-icon>
-              </a>
-            </section>
+      <section id="hero" class="hero" role="Hero">
+        <article class="hero-container">
+          <section class="heroIntro">
+            <p class="watchLink">
+              <span>|</span> Follow my adventures on
+              <a href="https://www.youtube.com/@TheTwoMigrations"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </p>
+            <h2 id="myName">
+              I am <span class="heroName">Mohamed Jalloh</span>
+            </h2>
+            <article id="myTitle" class="myTitle"></article>
+            <p class="hero-text">
+              I create Website and Apps with a twist of imagination..
+            </p>
+            <a href="mailto:abooabdillaah.mbj@gmail.com" class="contact-btn">
+              <span class="contact-btn-text">Contact Me</span>
+              <ion-icon
+                name="chevron-forward-outline"
+                class="contact-btn-icon"
+              ></ion-icon>
+            </a>
+          </section>
 
-            <section class="heroPreview">
-              <a href="#work" class="previewProject">
-                <img src="./assets/img/planaheadappimg.png" alt="" class="previewImg">
-              </a>
-            </section>
-          </article>
-          <article class="socialContainer">
-            <p class="socialNews">Connect With Me</p>
-            <ul class="social-ul" id="heroSocial"></ul>
-          </article>
-      
-        </section>
-        <section id="experiences" class="experiences">
-          <h2 class="section-title">Relevant Experiences</h2>
+          <section class="heroPreview">
+            <a href="https://www.youtube.com/@TheTwoMigrations" class="previewProject">
+              <img
+                src="./assets/img/youtubeimg.png"
+                alt="my Youtube Channel"
+                class="previewImg"
+              />
+            </a>
+          </section>
+        </article>
+        <article class="socialContainer">
+          <p class="socialNews">Connect With Me</p>
+          <ul class="social-ul" id="heroSocial"></ul>
+        </article>
+      </section>
+  <section id="experiences" class="experiences" role="My Experiences">
+        <h2 class="section-title">Relevant Experiences</h2>
 
-          <article class="flex-container">
-          
+        <article class="flex-container">
           <ul id="job-ul" class="job-ul">
             <li class="job-li active" data-company="NVF">NVF</li>
             <li class="job-li" data-company="Upwork">Upwork</li>
           </ul>
-        
+
           <section id="job" class="job"></section>
         </article>
-        </section>
-        
-    <section id="work" class="work" role="My Work">
-            <h2 class="section-title">My Work</h2>
-            <article class="projects-container"></article>
-          </section>
-          <section id="skills" class="skills" role="Skills">
-            <h2 class="section-title">Skills</h2>
-            <article class="flex-container">
-              <ul id="skill-ul" class="skill-ul">
-               
-              </ul>
-              <section id="skill-set" class="skill-set">
-               
-              </section>
-            </article>
-          </section>
-          
-  <section id="contact" class="contact" role="Contact">
-          <h2 class="section-title">Contact</h2>
-          <article class="contact-container">
-            <p class="contact-description">If you would like to get in touch, feel free to reach out to me via email.</p>
-            <a href="#" class="contact-link">
-              <span class="contact-link-text">Email Me</span>
-              <ion-icon name="arrow-forward-outline" class="contact-link-icon"></ion-icon>
-            </a>
-          </article>
-       <article class="contact-container">
-            <p class="contact-description">You can also find me on social media platforms like LinkedIn and GitHub.</p>
-
-            <section class="links-container">
-              <a href="#" class="contact-link">
-                <span class="contact-link-text">Connect on LinkedIn</span>
-                <ion-icon name="arrow-forward-outline" class="contact-link-icon"></ion-icon>
-              </a>
-  
-              <a href="#" class="contact-link">
-                <span class="contact-link-text">View My GitHub</span>
-                <ion-icon name="arrow-forward-outline" class="contact-link-icon"></ion-icon>
-              </a>
-            </section>
-            
-
-           
-          </article>
-          <p class="contact-description">I look forward to hearing from you!</p>
-        </section>
-        <section id="footer" class="footer">
-          <ul class="social-ul" id="footerSocial"></ul>
-          <p class="footer-text">© 2025 Mohamed Jalloh. All rights reserved.</p>
-          
-        </section>
       </section>
-    </main> 
+
+      <section id="projects" class="projects" role="My Projects">
+        <h2 class="section-title">My Work</h2>
+        <article class="projects-container"></article>
+      </section>
+      <section id="skills" class="skills" role="My Skills">
+        <h2 class="section-title">Skills</h2>
+        <article class="flex-container">
+          <ul id="skill-ul" class="skill-ul"></ul>
+          <section id="skill-set" class="skill-set"></section>
+        </article>
+      </section>
+
+      <section id="contact" class="contact" role="My Contact">
+        <h2 class="section-title">Contact</h2>
+        <article class="contact-container">
+          <p class="contact-description">
+            If you would like to get in touch, feel free to reach out to me via
+            email.
+          </p>
+          <a href="#" class="contact-link">
+            <span class="contact-link-text">Email Me</span>
+            <ion-icon
+              name="arrow-forward-outline"
+              class="contact-link-icon"
+            ></ion-icon>
+          </a>
+        </article>
+        <article class="contact-container">
+          <p class="contact-description">
+            You can also find me on social media platforms like LinkedIn and
+            GitHub.
+          </p>
+
+          <section class="links-container">
+            <a href="#" class="contact-link">
+              <span class="contact-link-text">Connect on LinkedIn</span>
+              <ion-icon
+                name="arrow-forward-outline"
+                class="contact-link-icon"
+              ></ion-icon>
+            </a>
+
+            <a href="#" class="contact-link">
+              <span class="contact-link-text">View My GitHub</span>
+              <ion-icon
+                name="arrow-forward-outline"
+                class="contact-link-icon"
+              ></ion-icon>
+            </a>
+          </section>
+        </article>
+        <p class="contact-description">I look forward to hearing from you!</p>
+      </section>
+      <section id="footer" class="footer">
+        <ul class="social-ul" id="footerSocial"></ul>
+        <p class="footer-text">© 2025 Mohamed Jalloh. All rights reserved.</p>
+      </section>
+    </main>
 
     <script src="assets/js/script.js"></script>
   </body>
-
 </html>

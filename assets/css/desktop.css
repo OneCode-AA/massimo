@@ -1,48 +1,106 @@
 @media (min-width: 1024px) {
+  
 
     .header {
       position: fixed;
       top: 0;
 
     }
-  
+
+     .header-container {
+      height: fit-content;
+      max-width: 992px;
+    }
+
+
     .header.active .header-container {
       width: 100%;
-      max-width: 1050px;
-     padding-block: 0;
+      max-width: 750px;
     } 
 
-    .header-container {
-      padding-block: 0;
-      padding: 5px 10px;
-    }
+ 
   
-    .actionMenu {
-      right: 1px;
-      top: 15vh;
-      transform: rotate(90deg);
+    .actionNav {
+      top: 1vh;
+      height: fit-content;
     }
-  
-    .statusIndicator {
-      transform: rotate(-85deg);
-    }
-  
-    .mobileMenuBtn {
+
+
+    .menuBtn {
       display: none;
     }
-  
-    .header-nav {
+
+    .navDesktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1050px;
+      padding-block: 10px;
+      padding-inline: 20px;
+    }
+
+
+    body.scrolling .header.active .header-container {
+      max-width: 400px;
+      opacity: 0;
+    }  
+
+    body.scrolling .header.active .themeBtn {
+      display: unset;
+      opacity: 1;
+    } 
+
+
+
+
+    
+
+    .navDesktop .leftNav {
       display: flex;
     }
-  
-    .header-nav-ul {
-      display: flex;
-      gap: 2rem;
+
+    .navDesktop .leftNav li {
+      width: 100%;;
     }
-  
-    .pageIndicator {
+
+    .navDesktop .leftNav li a {
+      padding-block: 20px ;
+      padding-inline: 15px;
+    }
+
+    .navDesktop .leftNav li:hover a {
+
+      background: var(--text-primary);
+      color: var(--bg-primary);
+    }
+    
+    .navDesktop .rightNav {
+      display: flex;
+    }
+
+
+    .navDesktop .rightNav li {
+      width: 100%;;
+    }
+
+    .navDesktop .rightNav li a {
+      padding-block: 20px ;
+      padding-inline: 15px;
+    }
+
+    .navDesktop .rightNav li:hover a {
+
+      background: var(--text-primary);
+      color: var(--bg-primary);
+    }
+
+
+
+    body.scrolling .header.active.logo-link {
       display: none;
-    }
+    
+    } 
 
 
     .hero {

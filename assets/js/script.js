@@ -1,5 +1,5 @@
 const menuBtn = document.querySelector('.menuBtn');
-const nav = document.getElementById("nav");
+const nav = document.getElementById("mobileNav");
 const header = document.getElementById("header");
 const themeBtn = document.getElementById("themeBtn");
 const themeSwitch = document.getElementById("statusIndicator");
@@ -7,7 +7,116 @@ const pageStatus = document.getElementById("pageIndicator");
 const actionMenu = document.getElementById('actionMenu');
 const myTitle = document.getElementById("myTitle");
 const sections = document.querySelectorAll("section");
+const logo = document.getElementById("logo");
 
+
+
+let scrollTimeout = null;
+
+window.addEventListener("scroll", () => {
+
+  document.body.classList.add("scrolling");
+  pageStatus.classList.add("actively-scrolling");
+  logo.classList.add("inactive");
+
+
+  if (window.scrollY > 0) {
+    header.classList.add("active");
+
+  } else {
+    header.classList.remove("active");
+    logo.classList.remove("inactive");
+    pageStatus.classList.remove("actively-scrolling");
+
+  }
+
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    document.body.classList.remove("scrolling");
+    pageStatus.classList.remove("actively-scrolling");
+    logo.classList.remove("inactive");
+  }, 2000);
+});
+
+  
+  
+
+
+observer = new IntersectionObserver((entries) => {
+  const visible = entries.filter(entry => entry.isIntersecting);
+  if (visible.length > 0) {
+    const section = visible[0].target;
+    const role = section.getAttribute("role") || section.id; 
+    pageStatus.textContent = role;             
+    pageStatus.classList.add("current-section");
+  }
+});
+
+  
+  
+  sections.forEach(section => observer.observe(section));
+  
+  
+  
+  const navItems = [
+    { text: "Home", href: "#hero" },
+    { text: "About", href: "#about" },
+    { text: "Experiences", href: "#experiences" },
+    { text: "Projects", href: "#projects" },
+    { text: "Skills", href: "#skills" },
+    { text: "Blog", href: "#blog" },
+  ];
+  
+  const socialLinks = [
+    { icon: "logo-codepen", href: "https://codepen.io/thetwomigrations", class: "codepenIcon" },
+    { icon: "logo-linkedin", href: "https://www.linkedin.com/in/abooabdillaahmbj/", class: "linkedinIcon" },
+    { icon: "logo-youtube", href: "https://www.youtube.com/@TheTwoMigrations", class: "youtubeIcon" },
+  ];
+  
+  function generateNav(id) {
+    const container = document.getElementById(id);
+    if (!container) return;
+  
+    navItems.forEach(({ text, href }) => {
+      const li = document.createElement("li");
+      li.className = id.includes("Nav") ? "nav-li" : "mobile-nav-li";
+  
+      const a = document.createElement("a");
+      a.href = href;
+      a.className = li.className + "-a";
+      a.textContent = text;
+  
+      li.appendChild(a);
+      container.appendChild(li);
+    });
+  }
+  
+  function generateSocial(id) {
+    const container = document.getElementById(id);
+    if (!container) return;
+  
+    socialLinks.forEach(({ icon, href }) => {
+      const li = document.createElement("li");
+      li.className = "social-li";
+  
+      const a = document.createElement("a");
+      a.href = href;
+      a.className = "social-li-a";
+  
+      const ion = document.createElement("ion-icon");
+      ion.setAttribute("name", icon);
+  
+      a.appendChild(ion);
+      li.appendChild(a);
+      container.appendChild(li);
+    });
+  }
+  
+  generateNav("mobileNav-ul");
+  generateSocial("navSocial");
+  generateSocial("heroSocial");
+  generateSocial("footerSocial");
+  
 
 
 
@@ -100,97 +209,6 @@ loopSession();
 
 
 
-window.addEventListener("scroll", () => {
-  header.classList.toggle("active", window.scrollY > 0);
-});
-
-
-
-
-
-
-const observer = new IntersectionObserver((entries) => {
-  const visibleEntries = entries.filter(entry => entry.isIntersecting);
-
-  if (visibleEntries.length > 0) {
-    const closest = visibleEntries.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-    const currentSection = closest.target.getAttribute('role');
-
-    if (pageStatus.innerHTML !== currentSection) {
-      pageStatus.innerHTML = currentSection;
-    }
-  }
-}, {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.1
-});
-
-
-sections.forEach(section => observer.observe(section));
-
-
-
-
-
-const navItems = [
-  { text: "Home", href: "#hero" },
-  { text: "Experiences", href: "#experiences" },
-  { text: "Work", href: "#work" },
-  { text: "Skills", href: "#skills" },
-  { text: "Contact", href: "#contact" },
-];
-
-const socialLinks = [
-  { icon: "logo-codepen", href: "https://codepen.io/thetwomigrations", class: "codepenIcon" },
-  { icon: "logo-linkedin", href: "https://www.linkedin.com/in/abooabdillaahmbj/", class: "linkedinIcon" },
-  { icon: "logo-youtube", href: "https://www.youtube.com/@TheTwoMigrations", class: "youtubeIcon" },
-];
-
-function generateNav(id) {
-  const container = document.getElementById(id);
-  if (!container) return;
-
-  navItems.forEach(({ text, href }) => {
-    const li = document.createElement("li");
-    li.className = id.includes("Nav") ? "nav-li" : "header-nav-li";
-
-    const a = document.createElement("a");
-    a.href = href;
-    a.className = li.className + "-a";
-    a.textContent = text;
-
-    li.appendChild(a);
-    container.appendChild(li);
-  });
-}
-
-function generateSocial(id) {
-  const container = document.getElementById(id);
-  if (!container) return;
-
-  socialLinks.forEach(({ icon, href }) => {
-    const li = document.createElement("li");
-    li.className = "social-li";
-
-    const a = document.createElement("a");
-    a.href = href;
-    a.className = "social-li-a";
-
-    const ion = document.createElement("ion-icon");
-    ion.setAttribute("name", icon);
-
-    a.appendChild(ion);
-    li.appendChild(a);
-    container.appendChild(li);
-  });
-}
-
-generateNav("mainNav");
-generateNav("mobileNav");
-generateSocial("heroSocial");
-generateSocial("footerSocial");
-
 
 const experiences = [
   {
@@ -259,7 +277,23 @@ const projects = [
     tech: ["React.js/Next.js"],
     liveLink: "https://plan-ahead-app.vercel.app/",
     codeLink: "https://github.com/OneCode-AA/plan-ahead-app",
-  }
+  },
+  {
+    title: "M.A.J. General Maintenance Landing Page",
+    image: "assets/img/maj-img.png",
+    description: "",
+    tech: ["HTML", "CSS", "JavaScript"],
+    liveLink: "https://maj-green.vercel.app/",
+    codeLink: "https://github.com/OneCode-AA/maj",
+  },
+  {
+    title: "Todo App",
+    image: "assets/img/todoapp.png",
+    description: "",
+    tech: ["React.js/Next.js"],
+    liveLink: "https://todo-app-2k25.vercel.app/",
+    codeLink: "https://github.com/OneCode-AA/todo-app-2k25"
+  },
 ];
 
 function renderProjects() {
@@ -297,6 +331,7 @@ function renderProjects() {
   });
 }
 
+
 renderProjects();
 
 
@@ -331,6 +366,7 @@ function renderSkillTabs() {
     ul.appendChild(li);
   });
 }
+
 
 function renderSkillSet(skillTitle) {
   const container = document.getElementById("skill-set");
